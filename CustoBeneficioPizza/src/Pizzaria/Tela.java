@@ -19,7 +19,7 @@ public class Tela {
 		pizzas[pizzas.length-1] = new Pizza(40.532243422, "Media", 35);
 		*/
 		
-		
+		System.out.println("teste");
 		do {
 			System.out.println("Informe o nome da Pizza");
 			in.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -31,13 +31,13 @@ public class Tela {
 			pizzas = aumentarArray(pizzas);
 			pizzas[pizzas.length-1] = new Pizza(valor, nome, tamanho);
 			
-			System.out.println("Deseja informar outra pizza? Sim ou Não");
+			System.out.println("Deseja informar outra pizza? Sim ou Nï¿½o");
 			opc = in.next().toLowerCase().charAt(0);
 			
 		} while (opc=='s');
 		
 		System.out.println("\n\n");
-		System.out.println("Nome           |Tamanho   |Preço         |Custo Beneficio");
+		System.out.println("Nome           |Tamanho   |Preï¿½o         |Custo Beneficio");
 		pizzas = Pizza.organizarLista(pizzas, 0, pizzas.length-1);
 		for (int i = 0; i < pizzas.length; i++) {
 			double base = pizzas[0].getCustoBeneficio();
